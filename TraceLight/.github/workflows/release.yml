@@ -1,0 +1,36 @@
+name: Release TraceLight Theme Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP for syntax check
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Lint PHP templates
+        run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      - name: Package TraceLight ZIP
+        run: |
+          mkdir -p dist/TraceLight
+          rsync -av --exclude='dist' --exclude='.git' --exclude='.github' ./ dist/TraceLight/
+          cd dist && zip -r TraceLight-${{ github.ref_name }}.zip TraceLight
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/TraceLight-${{ github.ref_name }}.zip
+          generate_release_notes: true

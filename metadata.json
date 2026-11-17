@@ -1,0 +1,6 @@
+{
+  "name": "AetherDev",
+  "description": "AetherDev Typecho 现代极客工程风主题完整开源项目、交互式实时预览与 GitHub 仓库导出工作台",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
