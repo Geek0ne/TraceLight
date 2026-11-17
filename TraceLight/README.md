@@ -1,6 +1,12 @@
 # 溯光 · TraceLight — 现代诗意极客工程风 Typecho 主题
 
+![Release](https://img.shields.io/badge/Release-V0.35-38bdf8?style=flat-square)
+![Typecho](https://img.shields.io/badge/Typecho-1.2%2B%20%2F%201.3-6366f1?style=flat-square)
+![PHP](https://img.shields.io/badge/PHP-7.4%20~%208.3-10b981?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-slate?style=flat-square)
+
 > **「溯光而行，以码载道」**
+> 当前发布版本：**`V0.35`**（详见 [CHANGELOG.md](./CHANGELOG.md)）
 > 灵感源自 **Linear / Vercel / Raycast** 的工程美学：**深空黑曜石底色 + 微弱鼠标追光网格 + Bento Grid 便当盒布局 + 精准等宽字体排版**。
 > 原生支持暗/亮双色无缝切换、零重型第三方 JS 库依赖（纯原生 ES6+），且**无需修改 Typecho 原生数据库表结构**（点赞与阅读量自动持久化至原生 `table.fields`）。
 
@@ -85,12 +91,23 @@ TraceLight/
 - **PHP**：`7.4` ~ `8.3`
 - **数据库**：MySQL 5.7/8.x、PostgreSQL、SQLite 3
 
-### 1. 下载并安装主题
+### 1. 下载并安装主题（当前发版 `V0.35`）
+
+方式 A：直接从 GitHub **Releases** 下载 `TraceLight-V0.35.zip` 压缩包，解压后确保目录结构为 `/usr/themes/TraceLight/index.php`。
+
+方式 B：使用 Git 克隆仓库并检出 `V0.35` 发行标签：
 ```bash
 cd /path/to/typecho/usr/themes/
-git clone https://github.com/your-username/TraceLight.git TraceLight
+git clone --branch V0.35 https://github.com/<your-username>/typecho-theme-tracelight.git TraceLight
 ```
-或者直接下载 Release 压缩包，解压后确保目录结构为 `/usr/themes/TraceLight/index.php`。
+
+### 1.5 Git 发版与 GitHub Actions 自动打包说明
+仓库内置 `.github/workflows/release.yml`，支持 `v*` 与 `V*` 标签触发自动 PHP 语法校验并打包 `TraceLight-V0.35.zip` 发布至 GitHub Releases：
+```bash
+git remote add origin https://github.com/<your-username>/typecho-theme-tracelight.git
+git push -u origin main
+git push origin V0.35
+```
 
 ### 2. 启用与外观配置
 1. 登录 Typecho 后台 → **控制台** → **外观**，找到 `TraceLight (溯光)` 并点击 **启用**。

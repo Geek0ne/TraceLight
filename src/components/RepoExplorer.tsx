@@ -67,13 +67,14 @@ export const RepoExplorer: React.FC<RepoExplorerProps> = ({
     }
   };
 
-  const gitPushCommands = `unzip TraceLight-typecho-theme-v1.1.0.zip -d TraceLight-repo
+  const gitPushCommands = `unzip TraceLight-typecho-theme-V0.35.zip -d TraceLight-repo
 cd TraceLight-repo/TraceLight
 git init -b main
 git add .
-git commit -m "feat: release TraceLight Typecho theme v1.1.0"
+git commit -m "chore(release): prepare TraceLight V0.35 release & README"
+git tag -a V0.35 -m "Release TraceLight V0.35"
 git remote add origin https://github.com/<your-username>/typecho-theme-tracelight.git
-git push -u origin main`;
+git push -u origin main --tags`;
 
   const handleCopyGitCmd = async () => {
     try {

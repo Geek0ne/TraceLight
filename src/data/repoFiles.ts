@@ -278,7 +278,7 @@ export function buildRepoFiles(config: ThemeConfig): RepoFileEntry[] {
       path: '.github/workflows/release.yml',
       category: 'github',
       language: 'yaml',
-      description: 'GitHub Actions：推送 v* 标签自动语法检查并打包 Release ZIP',
+      description: 'GitHub Actions：推送 v* / V* 标签自动语法检查并打包 Release ZIP',
       content: releaseYmlRaw
     },
     {
@@ -327,7 +327,7 @@ export async function exportAetherDevZip(config: ThemeConfig): Promise<void> {
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = 'TraceLight-typecho-theme-v1.1.0.zip';
+  anchor.download = 'TraceLight-typecho-theme-V0.35.zip';
   document.body.appendChild(anchor);
   anchor.click();
   document.body.removeChild(anchor);

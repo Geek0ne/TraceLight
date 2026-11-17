@@ -4,7 +4,7 @@
  *
  * @package TraceLight
  * @author TraceLight Studio
- * @version 1.1.0
+ * @version V0.35
  * @link https://github.com/tracelight-studio/typecho-theme-tracelight
  */
 
@@ -65,7 +65,7 @@ $analytics = getArchiveAnalytics();
                         <div class="fastfetch-specs">
                             <div class="t-line"><span class="t-key">Host</span><span class="t-sep">:</span><span class="t-val"><?php $this->options->title(); ?></span></div>
                             <div class="t-line"><span class="t-key">Kernel</span><span class="t-sep">:</span><span class="t-val">Typecho <?php echo htmlspecialchars(getTypechoVersion(), ENT_QUOTES, 'UTF-8'); ?> · PHP <?php echo PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION; ?></span></div>
-                            <div class="t-line"><span class="t-key">Theme</span><span class="t-sep">:</span><span class="t-val t-stack">TraceLight v1.1.0 (溯光)</span></div>
+                            <div class="t-line"><span class="t-key">Theme</span><span class="t-sep">:</span><span class="t-val t-stack">TraceLight V0.35 (溯光)</span></div>
                             <div class="t-line"><span class="t-key">Corpus</span><span class="t-sep">:</span><span class="t-val"><?php echo $analytics['totalPosts']; ?> Posts · <?php echo number_format($analytics['totalWords']); ?> Words</span></div>
                             <div class="t-line"><span class="t-key">Stack</span><span class="t-sep">:</span><span class="t-val t-stack">Rust · Go · TypeScript · K8s</span></div>
                             <div class="t-line"><span class="t-key">Fields</span><span class="t-sep">:</span><span class="t-val">Native table.fields (0 Extra)</span></div>

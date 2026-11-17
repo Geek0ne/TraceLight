@@ -454,7 +454,7 @@ export const ThemePreview: React.FC<ThemePreviewProps> = ({
   };
 
   const handleCopyTerminal = async () => {
-    const snippet = `HOST: ${config.siteTitle} (v1.1.0)\nOS: Darwin 24.3.0 arm64\nKERNEL: Typecho 1.2.1 · PHP 8.3\nSHELL: zsh 5.9 + starship\nSTACK: Rust · Go · TS · K8s\nSTATS: ${DEMO_ARTICLES.length} posts · ${totalWords.toLocaleString()} words`;
+    const snippet = `HOST: ${config.siteTitle} (V0.35)\nOS: Darwin 24.3.0 arm64\nKERNEL: Typecho 1.2.1 · PHP 8.3\nSHELL: zsh 5.9 + starship\nSTACK: Rust · Go · TS · K8s\nSTATS: ${DEMO_ARTICLES.length} posts · ${totalWords.toLocaleString()} words`;
     try {
       await navigator.clipboard.writeText(snippet);
       setCopiedTerminal(true);
@@ -1013,8 +1013,8 @@ export const ThemePreview: React.FC<ThemePreviewProps> = ({
                         <div className="space-y-1.5 text-[11.5px] pl-1">
                           <div className="truncate">
                             <span className="text-amber-400">a9f31d2</span>{' '}
-                            <span className="text-emerald-400">(HEAD -&gt; main, tag: v1.1.0)</span>{' '}
-                            <span className="text-slate-200">feat: rename to TraceLight &amp; add bookmarks/lab</span>
+                            <span className="text-emerald-400">(HEAD -&gt; main, tag: V0.35)</span>{' '}
+                            <span className="text-slate-200">chore(release): TraceLight V0.35 release &amp; README</span>
                           </div>
                           <div className="truncate">
                             <span className="text-amber-400">8e71b92</span>{' '}

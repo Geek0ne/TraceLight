@@ -52,7 +52,7 @@ export default function App() {
     setExportNotice(null);
     try {
       await exportAetherDevZip(config);
-      setExportNotice('已导出 TraceLight-typecho-theme-v1.1.0.zip（含完整主题与 GitHub 仓库文件）');
+      setExportNotice('已导出 TraceLight-typecho-theme-V0.35.zip（含完整主题与 GitHub 仓库文件）');
       setTimeout(() => setExportNotice(null), 4000);
     } catch {
       setExportNotice('打包导出失败，请重试');
